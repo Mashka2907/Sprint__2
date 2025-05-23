@@ -30,7 +30,7 @@ class TotalPoints(PointsForPlace, PointsForMeters):
     """Вычисляет общую сумму очков, складывая очки за место и очки за метры"""
 
     def get_total_points(self, meters, place):
-        total = self.get_points_for_place(place) + self.get_points_for_meters(meters)
+        total = float(self.get_points_for_place(place)) + float(self.get_points_for_meters(meters))
         return total
 
 
