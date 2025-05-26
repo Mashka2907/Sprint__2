@@ -39,9 +39,9 @@ class TotalPoints(PointsForPlace, PointsForMeters):
         meters_points = self.get_points_for_meters(meters)
 
         if isinstance(place_points, str):
-            return place_points
+            place_points = 0
         if isinstance(meters_points, str):
-            return meters_points
+            meters_points = 0
 
         self.total = place_points + meters_points
         return self.total
